@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <string name="app_name">SmartRingDemo</string>
+   <string name="hello_world">Hello world!</string>
+   <string name="action_settings">Settings</string>
+   <string name="title_devices">SmartRing</string>
+   <string name="ble_not_supported">This device does not support ble</string>
+   <string name="error_bluetooth_not_supported">There is no bluetooth</string>
+   <string name="menu_scan">scan</string>
+   <string name="menu_stop">stop</string>
+   <string name="unknown_device">Unknown device</string>
+   <string name="connected">connected</string>
+   <string name="sx_device">SmartRing_sx</string>
+   <string name="menu_save">save</string>
+   <string name="reminder_switch">turn on the reminder</string>
+   <string name="vibrate_setting">Vibrate setting</string>
+   <string name="Isvibrate">Vibrate</string>
+   <string name="LED_setting">LED setting</string>
+   <string name="LED_mode">LED mode</string>
+   <string name="mode1">no light</string>
+   <string name="mode2">Red light</string>
+   <string name="mode3">Green light</string>
+   <string name="mode4">Blue light</string>
+   <string name="remote_ip_address">Remote IP Address</string>
+   <string name="ota_upgrade_dialog_title">OTA Upgrade</string>
+   <string name="upgrade">Upgrade</string>
+   <string name="cancel">Cancel</string>
+   <string name="ota_upgrade_progress_dialog_title">Upgrading</string>
+   <string name="ota_upgrade_input_path">Patch file path :</string>
+   <string name="ota_upgrade_default_path">/sdcard/20732.bin</string>
+   <string name="upgrade_success">Upgrade success.Please reconnect.</string>
+   <string name="upgrade_failed">Upgrade failed.Please try again.</string>
+   <string name="upgrade_cancelled">Cancel success</string>
+</resources>

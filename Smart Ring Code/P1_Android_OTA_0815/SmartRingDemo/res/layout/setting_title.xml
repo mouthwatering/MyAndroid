@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/setting_actionbar"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+
+	>
+	<ImageButton
+	    android:id="@+id/btn_back"
+        android:layout_centerVertical="true"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/back"
+	    android:background="#00000000"
+	    ></ImageButton>
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/setting_type"
+	    android:layout_toRightOf="@+id/btn_back"
+	    android:layout_centerVertical="true"
+        android:textSize="18sp"
+        android:textColor="#2D2D2D"></TextView>
+	
+        
+</RelativeLayout>

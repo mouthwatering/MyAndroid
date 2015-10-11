@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+    
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/ItemImage"/>
+  
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:id="@+id/ItemTitle"
+	        android:textColor="#656565"
+	      
+	       android:layout_toRightOf="@+id/ItemImage"
+	        android:textSize="18sp"/>
+	   
+		<!--      <RelativeLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toLeftOf="@+id/temp"
+		        >
+					   <TextView
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					          android:textSize="12dp"
+					          android:id="@+id/tv_vib"
+					        android:text="振动"/>
+					   <TextView
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					          android:textSize="12dp"
+					          android:id="@+id/tv_led"
+					          android:layout_below="@+id/tv_vib"
+					        android:text="红灯"/>
+   			</RelativeLayout>
+   		
+		<TextView
+		    android:id="@id/temp"
+		    android:layout_alignParentRight="true"
+		    android:layout_width="5dp"
+		    android:layout_height="wrap_content"
+		    android:text=" "/>
+		    	--> 
+     
+   
+  
+     
+</RelativeLayout>

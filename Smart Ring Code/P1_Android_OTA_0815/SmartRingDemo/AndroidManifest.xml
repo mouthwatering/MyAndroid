@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smartringdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
+ 
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>   
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>   
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>      
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/smartring"
+        android:label="SmartRing" 
+         >
+        <activity
+            android:name="com.example.smartringdemo.DeviceScanActivity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.smartringdemo.HomePageActivity"
+            android:theme="@style/pg_title">
+        </activity>
+        
+        <activity
+            android:name="com.example.smartringdemo.SettingActivity"
+            android:theme="@style/setting_title">  
+        </activity>  
+        <activity
+            android:name="com.example.smartringdemo.LoveSetting"
+            android:theme="@style/AppBaseTheme"/>  
+        <activity
+            android:name="com.example.smartringdemo.LoveShow"
+            android:theme="@style/AppBaseTheme"></activity>  
+        <activity
+            android:name="com.example.smartringdemo.FeedBackActivity"
+            android:theme="@style/AppBaseTheme"/>
+        <activity
+            android:name="com.example.smartringdemo.InfoActivity"
+            android:theme="@android:style/Theme.Dialog"/>
+        
+        <activity
+            android:name="com.example.smartringdemo.RenameActivity"
+            android:theme="@style/AppBaseTheme"/>
+               
+        
+        <activity
+            android:name="com.example.smartringdemo.SOSsetting"
+            android:theme="@style/AppBaseTheme"/>
+        
+        <receiver android:name="com.example.receiver.PhoneStateReceiver">  
+            <intent-filter>
+                 <action android:name="android.intent.action.PHONE_STATE"/>           
+                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+		</receiver>
+		<receiver 
+		     android:enabled="true"
+		     android:name="com.example.receiver.SMSReceiver">
+			<intent-filter android:priority="1000">
+				<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.example.receiver.AlarmReceiver">
+		    <intent-filter>
+		        <action android:name="com.android.deskclock.ALARM_ALERT"></action>
+		    </intent-filter>
+		</receiver>
+		 <service
+            android:name="com.example.receiver.P2PReceiverService"
+            android:exported="false">
+        </service>
+        <receiver android:name="com.example.receiver.ScreenReceiver">
+		    <intent-filter>
+		         <action android:name="android.intent.action.USER_PRESENT"></action>
+		    </intent-filter>
+		</receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+     <com.example.Views.SlideMenu
+        android:id="@+id/slide_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include layout="@layout/slide_menu" />
+    
+        <LinearLayout
+            android:layout_width="match_parent"  
+			android:layout_height="match_parent"
+			android:orientation="vertical">  
+    
+			<LinearLayout  
+				    android:layout_width="match_parent"  
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/hp_bg"
+				    android:orientation="horizontal"
+				    android:layout_weight="0"
+				   > 
+				<!--   <ImageView
+				        android:src="@drawable/ring"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"/>  -->  
+				    <RelativeLayout  
+				    android:layout_width="match_parent"  
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/hp_bg"
+				    android:orientation="vertical"
+				    android:gravity="center"> 
+							<TextView
+							    android:id="@+id/device_name"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:textSize="32dp"
+							    android:textColor="#FFFFFF"
+							    ></TextView>
+							<TextView
+							    android:id="@+id/mac_address"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							     android:textSize="12dp"
+							     android:layout_below="@+id/device_name"
+							     android:textColor="#FFFFFF"
+							    ></TextView>			
+							
+					</RelativeLayout>
+				
+			
+		  </LinearLayout>  
+		 
+				    <ListView   
+					    android:id="@id/android:list"    
+					    android:layout_width="match_parent"    
+					    android:layout_height="0dip"    
+					    android:layout_weight="1"    
+					    android:gravity="center_vertical"
+					    android:drawSelectorOnTop="false"/>  
+				    <TextView   
+					    android:id="@id/android:empty"  
+					    android:layout_width="wrap_content"    
+					    android:layout_height="wrap_content"     
+				   /> 
+		</LinearLayout>
+	</com.example.Views.SlideMenu>
+
+</RelativeLayout>
